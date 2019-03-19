@@ -26,4 +26,4 @@ weatherFormEl.addEventListener ( 'submit', async ( event ) => {
     forecastMessageEl.textContent = data.forecastData
     locationMessageEl.textContent = data.location
 
-} )
+} ) 
