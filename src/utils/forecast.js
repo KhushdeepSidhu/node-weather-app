@@ -10,7 +10,7 @@ const forecast = ( latitude, longitude, callback ) => {
         } else if ( body.error ) {
             callback ( 'Unable to find the location.' )
         } else {
-            const forecast = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability * 100 }% chance of rain.`
+            const forecast = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability * 100 }% chance of rain.The temperature high is ${body.daily.data[0].temperatureHigh} and temperature low is ${body.daily.data[0].temperatureLow}.`
             callback ( undefined, forecast )
         }
     } )
